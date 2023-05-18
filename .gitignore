@@ -1,0 +1,6 @@
+obj/
+Debug/
+
+*.db-shm
+*.db-wal
+*.sock

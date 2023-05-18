@@ -1,0 +1,48 @@
+@page
+@model teste.RazorPages.Pages.Index
+@using System.Globalization
+
+<h1>Teste Docker</h1>
+
+<div class="info">
+    <div align="center">
+    </div>
+        <h3>Pessoas</h3>
+        <table align="center" class="table table-bordered table-sm table-hover-custom">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                </tr>
+            </thead>
+            <tbody> 
+                @foreach (var pessoaModel in Model.PessoaList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => pessoaModel.Nome)</td>
+                        <td>@Html.DisplayFor(model => pessoaModel.Sobrenome)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+</div>
+
+
+    
+<style>
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info{
+        width: 60vw;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
